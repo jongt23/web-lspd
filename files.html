@@ -5,17 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LSPD - Expedientes</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <style>
+      .menu-home-icon {
+        position: absolute;
+        top: 18px;
+        left: 18px;
+        z-index: 100;
+        background: rgba(10,19,28,0.85);
+        border-radius: 50%;
+        padding: 0.6rem 0.7rem;
+        color: var(--accent);
+        font-size: 1.7rem;
+        transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+        box-shadow: 0 2px 8px #0006;
+        text-decoration: none;
+      }
+      .menu-home-icon:hover {
+        background: var(--accent);
+        color: #fff;
+      }
+      header {
+        position: relative;
+      }
+    </style>
 </head>
 <body>
     <header>
+        <a href="index.html" class="menu-home-icon" title="Volver al menú principal">
+            <i class="fas fa-house"></i>
+        </a>
         <h1>LSPD - Expedientes</h1>
     </header>
     <main>
         <div style="width:100%;display:flex;flex-direction:column;align-items:center;">
             <h2 style="color: var(--accent); font-size: 2rem; letter-spacing: 1px; margin-bottom:2rem; text-align:center;">Asuntos internos</h2>
             <div class="menu">
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLScQRyca_CxTPlZSQiP4IdN3vxam9sbbNg3X0Jv__982Lj_l2Q/viewform?usp=dialog" class="menu-button" target="_blank" rel="noopener">Enviar Denuncia</a>
-                <a href="https://script.google.com/macros/s/AKfycbxZlxBz9pJU5YZW1xvgLZoZH97QUxQZMiO_FM01AcdAaunq2EIJBfD4D-rQ-H8f0gPL/exec" class="menu-button" target="_blank" rel="noopener">Ver Expedientes</a>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSeOzCWSRHMJHXC5aHcjfmh-trwD-NyLgoKuRdaiA7C8a8z0qw/viewform?usp=sharing&ouid=114142919870231131777" class="menu-button" target="_blank" rel="noopener">Enviar Denuncia</a>
+                <a href="https://script.google.com/macros/s/AKfycbzRd0VFzAIYuIVf2O2NkfYw4oQt5LQ7b5bw3OvzuP5M2DTBBINWvU7uQp_R8r8HwkIh/exec" class="menu-button" target="_blank" rel="noopener">Ver Expedientes</a>
             </div>
         </div>
     </main>
