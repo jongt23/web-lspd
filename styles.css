@@ -63,9 +63,10 @@ main {
 .menu-button {
   display: flex;
   align-items: center;
-  justify-content: center;
-  width: 220px;
-  padding: 1.2rem 0;
+  justify-content: flex-start; /* Alinea el contenido a la izquierda */
+  gap: 0.4em;                 /* Reduce el espacio entre icono y texto */
+  width: 260px; /* Más ancho para mejor alineación */
+  padding: 1.2rem 0 1.2rem 1.6rem; /* Más espacio a la izquierda */
   font-size: 1.3rem;
   font-weight: 600;
   color: var(--text);
@@ -86,6 +87,13 @@ main {
   transform: translateY(-3px) scale(1.04);
   box-shadow: 0 6px 24px rgba(0,162,255,0.18);
   outline: none;
+}
+
+.menu-button i {
+  min-width: 1.3em; /* Reduce el espacio reservado para el icono */
+  text-align: left;
+  margin-right: 0.4em; /* Reduce el margen derecho del icono */
+  font-size: 1.3em;
 }
 
 footer {
