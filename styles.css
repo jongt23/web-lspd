@@ -1,0 +1,116 @@
+:root {
+  --primary: #1a3c6e;
+  --secondary: #0078d7;
+  --accent: #00a2ff;
+  --background: #0a131c;
+  --card-bg: #132333;
+  --text: #ffffff;
+  --text-muted: #a7c1de;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  text-align: center;
+  padding: 2rem 0 1rem 0;
+  background: rgba(10, 19, 28, 0.7);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+}
+
+header h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: var(--accent);
+  margin: 0;
+  text-shadow: 1px 2px 8px #0008;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  background: var(--card-bg);
+  padding: 3rem 2rem;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+  min-width: 320px;
+  align-items: center;
+}
+
+.menu-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 220px;
+  padding: 1.2rem 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--text);
+  background: linear-gradient(90deg, var(--secondary), var(--accent));
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+  transition: transform 0.15s, box-shadow 0.15s, background 0.2s;
+  letter-spacing: 1px;
+  position: relative;
+  overflow: hidden;
+}
+
+.menu-button:hover, .menu-button:focus {
+  background: linear-gradient(90deg, var(--accent), var(--secondary));
+  color: #fff;
+  transform: translateY(-3px) scale(1.04);
+  box-shadow: 0 6px 24px rgba(0,162,255,0.18);
+  outline: none;
+}
+
+footer {
+  text-align: center;
+  padding: 1.2rem 0 0.7rem 0;
+  color: var(--text-muted);
+  background: rgba(10, 19, 28, 0.7);
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  margin-top: auto;
+}
+
+@media (max-width: 600px) {
+  .menu {
+    min-width: unset;
+    width: 95vw;
+    padding: 2rem 0.5rem;
+    gap: 1.2rem;
+  }
+  .menu-button {
+    width: 90vw;
+    font-size: 1.1rem;
+    padding: 1rem 0;
+  }
+  header h1 {
+    font-size: 1.5rem;
+  }
+}
