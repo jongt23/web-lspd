@@ -44,6 +44,11 @@
         align-items: center;
         justify-items: center;
       }
+      .menu .menu-button:last-child {
+        /* Elimina la regla de centrado especial */
+        /* grid-column: 1 / span 2;
+        justify-self: center; */
+      }
       .menu-button {
         text-transform: uppercase;
         letter-spacing: 1.5px;
@@ -78,6 +83,59 @@
           min-width: unset;
         }
       }
+      .menu-logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 56px; /* Ajusta según el alto de tus botones */
+        grid-column: auto;
+      }
+      .menu-logo img {
+        height: 56px; /* Igual que el alto del botón */
+        width: auto;
+        display: block;
+        margin: 0 auto;
+        border-radius: 8px;
+        background: #fff2;
+        padding: 4px 8px;
+        box-shadow: 0 2px 12px #0003;
+      }
+      .menu-logo-btn {
+        padding: 0;
+        background: #fff2;
+        box-shadow: 0 2px 12px #0003;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 56px;
+        min-width: 180px; /* Igual que los otros botones */
+        border-radius: 8px;
+        transition: background 0.2s, transform 0.2s;
+      }
+      .menu-logo-btn:hover {
+        background: #e0e7ef;
+        transform: scale(1.04);
+      }
+      .menu-logo-img-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+      }
+      .menu-logo-btn img {
+        max-height: 40px;
+        max-width: 120px;
+        width: auto;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+        border-radius: 6px;
+        background: transparent;
+        box-shadow: none;
+        padding: 0;
+      }
     </style>
 </head>
 <body>
@@ -101,11 +159,19 @@
             <a href="files.html" class="menu-button">
                 <i class="fa-solid fa-folder-open"></i> EXPEDIENTES
             </a>
-            <a href="rtd.html" class="menu-button">
-                <i class="fa-solid fa-clipboard-list"></i> RTD
+            <a href="https://script.google.com/macros/s/AKfycbxlbUClb2H1EuRsxNTCO72dFMH0DpkhHKqSN9EoMsUwUiKtbuGmbtxJY9sy-uDmc4Xz9g/exec" class="menu-button" target="_blank" rel="noopener">
+                <i class="fa-solid fa-scale-balanced"></i> CÓDIGO PENAL
             </a>
             <a href="sanciones.html" class="menu-button">
                 <i class="fa-solid fa-gavel"></i> SANCIONES
+            </a>
+            <a href="rtd.html" class="menu-button">
+                <i class="fa-solid fa-clipboard-list"></i> RTD
+            </a>
+            <a href="#" class="menu-button menu-logo-btn" title="Logo especial">
+                <span class="menu-logo-img-wrapper">
+                    <img src="https://r2.fivemanage.com/image/dPcsJUvKpySa.png" alt="Logo extra" />
+                </span>
             </a>
         </div>
     </main>
