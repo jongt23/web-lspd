@@ -5,26 +5,101 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LSPD Menu Web Application</title>
     <link rel="stylesheet" href="styles.css">
-    <!-- Añade Font Awesome para los iconos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+      .lspd-logo-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2.2rem;
+        margin-bottom: 1.2rem;
+      }
+      .lspd-logo {
+        width: 192px;
+        height: 192px;
+        border-radius: 50%;
+        background: rgba(10,19,28,0.7);
+        box-shadow: 0 6px 32px #000a;
+        padding: 16px;
+        object-fit: contain;
+        border: 3px solid var(--accent);
+        transition: transform 0.2s;
+      }
+      .lspd-logo:hover {
+        transform: scale(1.07) rotate(-3deg);
+        box-shadow: 0 12px 36px #00a2ff55;
+        border-color: #fff;
+      }
+      .menu {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        background: rgba(19,35,51,0.92);
+        box-shadow: 0 12px 40px #0007;
+        border: 2px solid var(--accent);
+        backdrop-filter: blur(2px);
+        padding: 3rem 2rem;
+        border-radius: 18px;
+        min-width: 320px;
+        align-items: center;
+        justify-items: center;
+      }
+      .menu-button {
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+      }
+      header {
+        background: transparent;
+        box-shadow: none;
+        padding-bottom: 0;
+      }
+      header h1 {
+        font-size: 2.3rem;
+        font-weight: 900;
+        letter-spacing: 2px;
+        color: var(--accent);
+        margin: 0 0 0.5rem 0;
+        text-shadow: 0 2px 16px #000a, 0 0px 2px #00a2ff55;
+      }
+      body {
+        background: linear-gradient(120deg, #0a131c 0%, #1a3c6e 60%, #0078d7 100%);
+      }
+      @media (max-width: 600px) {
+        .lspd-logo-container { margin-top: 1.2rem; margin-bottom: 0.7rem; }
+        .lspd-logo { width: 70px; height: 70px; }
+        header h1 { font-size: 1.3rem; }
+      }
+      @media (max-width: 800px) {
+        .menu {
+          grid-template-columns: 1fr;
+          gap: 1.2rem;
+          width: 95vw;
+          padding: 2rem 0.5rem;
+          min-width: unset;
+        }
+      }
+    </style>
 </head>
 <body>
     <header>
+        <div class="lspd-logo-container">
+            <img src="https://r2.fivemanage.com/image/smVKck6hpqCp.png" alt="LSPD Logo" class="lspd-logo">
+        </div>
         <h1>LSPD - Menú Principal</h1>
     </header>
     <main>
         <div class="menu">
             <a href="https://calendar.google.com/calendar/u/0/r/week?cid=MDI4MjQyYWUwMTcxMjQ5OGMxNjczZjY3MDAwNTFiZDA5Njc4NDFhMDlmZWFmMjg0YjIwNGExOTcxYjkzMDFjM0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&pli=1" class="menu-button" target="_blank" rel="noopener">
-                <i class="fa-solid fa-calendar-days"></i> Calendario
+                <i class="fa-solid fa-calendar-days"></i> CALENDARIO
             </a>
             <a href="https://script.google.com/macros/s/AKfycbzAPTLJw49neGpX5eiuOOFXbId2jhwcR0hUcFJe-2MB8iqu1UjDeR7D-IgpNke3DEi_/exec" class="menu-button" target="_blank" rel="noopener">
-                <i class="fa-solid fa-shirt"></i> Uniformes
+                <i class="fa-solid fa-shirt"></i> UNIFORMES
             </a>
             <a href="licenses.html" class="menu-button">
-                <i class="fa-solid fa-id-card"></i> Licencias
+                <i class="fa-solid fa-id-card"></i> LICENCIAS
             </a>
             <a href="files.html" class="menu-button">
-                <i class="fa-solid fa-folder-open"></i> Expedientes
+                <i class="fa-solid fa-folder-open"></i> EXPEDIENTES
             </a>
             <a href="rtd.html" class="menu-button">
                 <i class="fa-solid fa-clipboard-list"></i> RTD

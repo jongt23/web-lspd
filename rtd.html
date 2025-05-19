@@ -5,46 +5,84 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LSPD - RTD</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <style>
-      .menu-home-icon {
-        position: absolute;
-        top: 18px;
-        left: 18px;
-        z-index: 100;
-        background: rgba(10,19,28,0.85);
-        border-radius: 50%;
-        padding: 0.6rem 0.7rem;
-        color: var(--accent);
-        font-size: 1.7rem;
-        transition: background 0.2s, color 0.2s, box-shadow 0.2s;
-        box-shadow: 0 2px 8px #0006;
-        text-decoration: none;
+      .lspd-logo-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2.2rem;
+        margin-bottom: 1.2rem;
       }
-      .menu-home-icon:hover {
-        background: var(--accent);
-        color: #fff;
+      .lspd-logo {
+        width: 192px;
+        height: 192px;
+        border-radius: 50%;
+        background: rgba(10,19,28,0.7);
+        box-shadow: 0 6px 32px #000a;
+        padding: 16px;
+        object-fit: contain;
+        border: 3px solid var(--accent);
+        transition: transform 0.2s;
+      }
+      .lspd-logo:hover {
+        transform: scale(1.07) rotate(-3deg);
+        box-shadow: 0 12px 36px #00a2ff55;
+        border-color: #fff;
+      }
+      .menu {
+        background: rgba(19,35,51,0.92);
+        box-shadow: 0 12px 40px #0007;
+        border: 2px solid var(--accent);
+        backdrop-filter: blur(2px);
+      }
+      .menu-button {
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
       }
       header {
-        position: relative;
+        background: transparent;
+        box-shadow: none;
+        padding-bottom: 0;
+      }
+      header h1 {
+        font-size: 2.3rem;
+        font-weight: 900;
+        letter-spacing: 2px;
+        color: var(--accent);
+        margin: 0 0 0.5rem 0;
+        text-shadow: 0 2px 16px #000a, 0 0px 2px #00a2ff55;
+      }
+      body {
+        background: linear-gradient(120deg, #0a131c 0%, #1a3c6e 60%, #0078d7 100%);
+      }
+      @media (max-width: 600px) {
+        .lspd-logo-container { margin-top: 1.2rem; margin-bottom: 0.7rem; }
+        .lspd-logo { width: 70px; height: 70px; }
+        header h1 { font-size: 1.3rem; }
       }
     </style>
 </head>
 <body>
     <header>
-        <a href="index.html" class="menu-home-icon" title="Volver al menú principal">
-            <i class="fas fa-house"></i>
-        </a>
+        <div class="lspd-logo-container">
+            <a href="index.html" title="Volver al menú principal">
+                <img src="https://r2.fivemanage.com/image/smVKck6hpqCp.png" alt="LSPD Logo" class="lspd-logo">
+            </a>
+        </div>
         <h1>LSPD - RTD</h1>
     </header>
     <main>
-        <div style="width:100%;display:flex;flex-direction:column;align-items:center;">
-            <h2 style="color: var(--accent); font-size: 2rem; letter-spacing: 1px; margin-bottom:2rem; text-align:center;">Registro de Valoraciones</h2>
-            <div class="menu">
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSeAY1D9-XIiX79aGYAP0n8jQ5aCr7oZBpwttgHQUD8QzwX0iA/viewform" class="menu-button" target="_blank" rel="noopener">Valorar Agente</a>
-                <a href="https://script.google.com/macros/s/AKfycbyCMjVBN4qS8H00ZDGOi6ELJTyiIuJ9ObVJBX-HPdTD5pjM8iuZx8v-D3WCLfChYb5pLA/exec" class="menu-button" target="_blank" rel="noopener">Ver Valoraciones</a>
-                <a href="https://forms.gle/KD3uuhCjhARd8odb6" class="menu-button" target="_blank" rel="noopener">Cambiar PIN</a>
-            </div>
+        <div class="menu">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeAY1D9-XIiX79aGYAP0n8jQ5aCr7oZBpwttgHQUD8QzwX0iA/viewform" class="menu-button" target="_blank" rel="noopener">
+                <i class="fa-solid fa-star"></i> VALORAR AGENTE
+            </a>
+            <a href="https://script.google.com/macros/s/AKfycbw_MGw4_NqXsexX5a1ICUIgSPKgZbz9AYR-AjdY3KLJ7yV4Gbw_1wihI4a0-b-lSXqC3g/exec" class="menu-button" target="_blank" rel="noopener">
+                <i class="fa-solid fa-eye"></i> VER VALORACIONES
+            </a>
+            <a href="https://forms.gle/KD3uuhCjhARd8odb6" class="menu-button" target="_blank" rel="noopener">
+                <i class="fa-solid fa-key"></i> CAMBIAR PIN
+            </a>
         </div>
     </main>
     <footer>
