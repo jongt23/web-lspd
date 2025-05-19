@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LSPD - Códigos</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+      body {
+        background: linear-gradient(120deg, #0a131c 0%, #1a3c6e 60%, #0078d7 100%);
+      }
+      .lspd-logo-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2.2rem;
+        margin-bottom: 1.2rem;
+      }
+      .lspd-logo {
+        width: 192px;
+        height: 192px;
+        border-radius: 50%;
+        background: rgba(10,19,28,0.7);
+        box-shadow: 0 6px 32px #000a;
+        padding: 16px;
+        object-fit: contain;
+        border: 3px solid var(--accent, #0078d7);
+        transition: transform 0.2s;
+      }
+      .lspd-logo:hover {
+        transform: scale(1.07) rotate(-3deg);
+        box-shadow: 0 12px 36px #00a2ff55;
+        border-color: #fff;
+      }
+      header {
+        background: transparent;
+        box-shadow: none;
+        padding-bottom: 0;
+      }
+      header h1 {
+        font-size: 2.3rem;
+        font-weight: 900;
+        letter-spacing: 2px;
+        color: var(--accent, #0078d7);
+        margin: 0 0 0.5rem 0;
+        text-shadow: 0 2px 16px #000a, 0 0px 2px #00a2ff55;
+        text-align: center;
+      }
+      .codigos-tables-flex {
+        display: flex;
+        gap: 2rem;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 100%;
+        max-width: 1100px;
+        margin: 2rem auto;
+        align-items: flex-start; /* <-- Esto permite que cada tabla tenga su propia altura */
+      }
+      .codigos-table {
+        flex: 1 1 350px;
+        max-width: 500px;
+        min-width: 280px;
+        background: rgba(19,35,51,0.92);
+        border: 2px solid var(--accent, #0078d7);
+        border-radius: 16px;
+        box-shadow: 0 8px 32px #000a;
+        overflow: hidden;
+        margin-bottom: 1rem;
+      }
+      table.codigos {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 1.08rem;
+      }
+      table.codigos th, table.codigos td {
+        padding: 0.85rem 1.2rem;
+        text-align: left;
+      }
+      table.codigos th {
+        background: var(--accent, #0078d7);
+        color: #fff;
+        font-size: 1.1rem;
+        letter-spacing: 1px;
+        font-weight: 700;
+      }
+      table.codigos tr:nth-child(even) {
+        background: #16263b;
+      }
+      table.codigos tr:nth-child(odd) {
+        background: #223a57;
+      }
+      table.codigos td {
+        color: #eaf6ff;
+        border-bottom: 1px solid #1a2d47;
+      }
+      table.codigos tr:last-child td {
+        border-bottom: none;
+      }
+      @media (max-width: 700px) {
+        .codigos-table { max-width: 98vw; }
+        .codigos-table-container { margin: 1rem 0; }
+        table.codigos th, table.codigos td { padding: 0.6rem 0.5rem; font-size: 0.97rem; }
+      }
+      @media (max-width: 500px) {
+        header h1 { font-size: 1.2rem; }
+        .lspd-logo { width: 70px; height: 70px; }
+      }
+      .volver-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5em;
+        margin: 1.5rem auto 0 auto;
+        padding: 0.7rem 1.5rem;
+        border-radius: 8px;
+        background: var(--accent, #0078d7);
+        color: #fff;
+        font-weight: 700;
+        font-size: 1rem;
+        border: none;
+        box-shadow: 0 2px 12px #0004;
+        text-decoration: none;
+        transition: background 0.2s, transform 0.2s;
+        cursor: pointer;
+        max-width: 220px;
+        justify-content: center;
+      }
+      .volver-btn:hover {
+        background: #005fa3;
+        transform: scale(1.04);
+      }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="lspd-logo-container">
+            <a href="index.html" title="Volver al menú principal">
+                <img src="https://r2.fivemanage.com/image/smVKck6hpqCp.png" alt="LSPD Logo" class="lspd-logo">
+            </a>
+        </div>
+        <h1>Códigos y Claves LSPD</h1>
+    </header>
+    <main>
+      <div class="codigos-tables-flex">
+        <div class="codigos-table">
+          <table class="codigos">
+            <thead>
+              <tr>
+                <th>Código</th>
+                <th>Significado</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>10-0</td><td>Precaución</td></tr>
+              <tr><td>10-3</td><td>Pedir información sobre X</td></tr>
+              <tr><td>10-4</td><td>Afirmativo / recibido</td></tr>
+              <tr><td>10-5</td><td>Negativo</td></tr>
+              <tr><td>10-6</td><td>Parada de tráfico</td></tr>
+              <tr><td>10-8</td><td>Esperando asignación</td></tr>
+              <tr><td>10-9</td><td>Repetir comunicado</td></tr>
+              <tr><td>10-10</td><td>Salida de servicio</td></tr>
+              <tr><td>10-15</td><td>Sujeto bajo custodia</td></tr>
+              <tr><td>10-20</td><td>Ubicación</td></tr>
+              <tr><td>10-22</td><td>Presentarse en comisaría</td></tr>
+              <tr><td>10-23</td><td>Mantenerse a la espera</td></tr>
+              <tr><td>10-35</td><td>Estado de la unidad</td></tr>
+              <tr><td>10-37</td><td>Solicitar una grúa</td></tr>
+              <tr><td>10-38</td><td>Solicitar asistencia médica</td></tr>
+              <tr><td>10-95</td><td>Procesamiento de un sujeto</td></tr>
+              <tr><td>10-98</td><td>Incidencia finalizada</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="codigos-table">
+          <table class="codigos">
+            <thead>
+              <tr>
+                <th>Código</th>
+                <th>Significado</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Cod-1</td><td>Aviso centralita</td></tr>
+              <tr><td>Cod-2</td><td>Unidad disponible</td></tr>
+              <tr><td>Cod-3</td><td>Acudir con sonoras y lumínicas</td></tr>
+              <tr><td>Cod-6</td><td>Patrullaje por la zona</td></tr>
+              <tr><td>Cod-7</td><td>Parada técnica</td></tr>
+              <tr><td>Cod-9</td><td>Búsqueda y captura</td></tr>
+              <tr><td>Cod-100</td><td>En posición para interceptar</td></tr>
+              <tr><td>Cod-187</td><td>Homicidio</td></tr>
+              <tr><td>Cod-207</td><td>Secuestro</td></tr>
+              <tr><td>Cod-215</td><td>Disparos, tiroteo</td></tr>
+              <tr><td>Cod-444</td><td>Tiroteo con agentes implicados</td></tr>
+              <tr><td>Cod-254 V</td><td>Persecución en vehículo</td></tr>
+              <tr><td>Cod-254 P</td><td>Persecución a pie</td></tr>
+              <tr><td>Cod-320</td><td>Venta de drogas</td></tr>
+              <tr><td>Cod-480</td><td>Atropello y fuga</td></tr>
+              <tr><td>Cod-487 V</td><td>Robo de vehículo de importación</td></tr>
+              <tr><td>Cod-487</td><td>Robo mayor</td></tr>
+              <tr><td>Cod-488</td><td>Robo menor</td></tr>
+              <tr><td>Cod-505</td><td>Conducción temeraria</td></tr>
+              <tr><td>Cod-Pit</td><td>Desestabilizar vehículo</td></tr>
+              <tr><td>6-ADAM</td><td>Refuerzos</td></tr>
+              <tr><td>Clave Robert</td><td>Autorización para abrir fuego</td></tr>
+              <tr><td>QRR</td><td>Agente en peligro</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+    <footer>
+        <p style="text-align:center; color:#eaf6ff; margin-top:2rem;">&copy; 2025 LSPD. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

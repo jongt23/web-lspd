@@ -32,7 +32,7 @@
       }
       .menu {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
         gap: 2rem;
         background: rgba(19,35,51,0.92);
         box-shadow: 0 12px 40px #0007;
@@ -69,12 +69,15 @@
       body {
         background: linear-gradient(120deg, #0a131c 0%, #1a3c6e 60%, #0078d7 100%);
       }
+      @media (max-width: 900px) {
+        .menu {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
       @media (max-width: 600px) {
         .lspd-logo-container { margin-top: 1.2rem; margin-bottom: 0.7rem; }
         .lspd-logo { width: 70px; height: 70px; }
         header h1 { font-size: 1.3rem; }
-      }
-      @media (max-width: 800px) {
         .menu {
           grid-template-columns: 1fr;
           gap: 1.2rem;
@@ -163,15 +166,19 @@
                 <i class="fa-solid fa-scale-balanced"></i> CÓDIGO PENAL
             </a>
             <a href="https://script.google.com/macros/s/AKfycbxrss4ubqUJ6hPD0jkBZ1hVsm0ueAQLNK10SZAedlylC84-v4JZE6CDebAN_fy4eE2w/exec" class="menu-button" target="_blank" rel="noopener">
-                <i class="fa-solid fa-scale-balanced"></i> SANCIONES
+                <i class="fa-solid fa-gavel"></i> SANCIONES
             </a>
             <a href="rtd.html" class="menu-button">
                 <i class="fa-solid fa-clipboard-list"></i> RTD
             </a>
-            <a href="#" class="menu-button menu-logo-btn" title="Logo especial">
-                <span class="menu-logo-img-wrapper">
-                    <img src="https://r2.fivemanage.com/image/dPcsJUvKpySa.png" alt="Logo extra" />
-                </span>
+            <a href="codigos.html" class="menu-button" target="_blank" rel="noopener">
+                <i class="fa-solid fa-book"></i> CÓDIGOS
+            </a>
+            <a href="https://docs.google.com/document/d/18Ievo5IPF3T1k146sbrtEu_N5VSi0E9sL22jcYihaxs/edit?usp=sharing" class="menu-button" target="_blank" rel="noopener">
+                <i class="fa-solid fa-book-open"></i> MANUAL
+            </a>
+            <a href="https://docs.google.com/spreadsheets/d/17jDWasG7VHeqcBtrUOzKp4Gya3V0Q1ZnAofHwL_ezSA/edit?usp=sharing" class="menu-button" target="_blank" rel="noopener">
+                <i class="fa-solid fa-user-check"></i> FICHAR
             </a>
         </div>
     </main>
