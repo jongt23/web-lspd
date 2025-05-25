@@ -8,112 +8,53 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="icon" type="image/png" href="https://r2.fivemanage.com/image/smVKck6hpqCp.png">
     <style>
-      .lspd-logo-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 2.2rem;
-        margin-bottom: 1.2rem;
-      }
-      .lspd-logo {
-        width: 192px;
-        height: 192px;
-        border-radius: 50%;
-        background: rgba(10,19,28,0.7);
-        box-shadow: 0 6px 32px #000a;
-        padding: 16px;
-        object-fit: contain;
-        border: 3px solid var(--accent);
-        transition: transform 0.2s;
-      }
-      .lspd-logo:hover {
-        transform: scale(1.07) rotate(-3deg);
-        box-shadow: 0 12px 36px #00a2ff55;
-        border-color: #fff;
-      }
-      .menu {
-        display: flex;
-        flex-direction: column;
-        gap: 2rem;
-        background: rgba(19,35,51,0.92);
-        box-shadow: 0 12px 40px #0007;
-        border: 2px solid var(--accent);
-        backdrop-filter: blur(2px);
-        padding: 3rem 2rem;
-        border-radius: 18px;
-        min-width: 320px;
-        align-items: center;
-        justify-content: center;
-        margin: 0 auto;
-        max-width: 400px;
-      }
-      .menu-button {
-        text-transform: uppercase;
-        letter-spacing: 1.5px;
-        font-size: 1.1rem;
-        padding: 1rem 2.2rem;
-        border-radius: 8px;
-        border: none;
-        background: var(--accent, #0078d7);
-        color: #fff;
-        box-shadow: 0 2px 12px #0004;
-        transition: background 0.2s, transform 0.2s;
-        display: flex;
-        align-items: center;
-        gap: 0.7em;
-        text-decoration: none;
-        font-weight: 700;
-    }
-      .menu-button:hover {
-        background: #005fa3;
-        transform: scale(1.04);
-      }
-      header {
-        background: transparent;
-        box-shadow: none;
-        padding-bottom: 0;
-      }
+      /* Sanciones specific styles */
       header h1 {
-        font-size: 2.3rem;
-        font-weight: 900;
-        letter-spacing: 2px;
-        color: var(--accent);
-        margin: 0 0 0.5rem 0;
-        text-shadow: 0 2px 16px #000a, 0 0px 2px #00a2ff55;
+        color: var(--accent); /* Keep accent color for this specific H1 */
       }
-      body {
-        background: linear-gradient(120deg, #0a131c 0%, #1a3c6e 60%, #0078d7 100%);
+      .menu { /* Overriding global .menu to be wider for these buttons */
+        min-width: 320px;
+        max-width: 450px; /* Slightly wider for these buttons */
+        padding: 2rem 1.5rem; /* Adjust padding */
       }
+      .sanciones-button { /* Specific class for these buttons if they need different styling */
+        font-size: 1.05rem; /* Custom font size */
+        padding: 0.9rem 1.8rem; /* Custom padding */
+        background: var(--accent); /* Solid accent color */
+        font-weight: 700;
+      }
+      .sanciones-button:hover {
+        background: var(--accent-darker); /* Darker accent on hover */
+        transform: scale(1.04) translateY(-2px);
+      }
+
       @media (max-width: 600px) {
-        .lspd-logo-container { margin-top: 1.2rem; margin-bottom: 0.7rem; }
-        .lspd-logo { width: 70px; height: 70px; }
-        header h1 { font-size: 1.3rem; }
-        .menu { padding: 1.2rem 0.3rem; min-width: unset; max-width: 98vw; }
-        .menu-button { font-size: 0.95rem; padding: 0.7rem 1.1rem; }
+        .menu { padding: 1.5rem 1rem; }
+        .sanciones-button { font-size: 0.9rem; padding: 0.7rem 1rem; }
       }
     </style>
 </head>
 <body>
     <header>
-        <div class="lspd-logo-container">
+        <div class="page-logo-container">
             <a href="index.html" title="Volver al menú principal">
-                <img src="https://r2.fivemanage.com/image/smVKck6hpqCp.png" alt="LSPD Logo" class="lspd-logo">
+                <img src="https://r2.fivemanage.com/image/smVKck6hpqCp.png" alt="LSPD Logo" class="page-logo">
             </a>
         </div>
         <h1>LSPD - Sanciones</h1>
     </header>
     <main>
         <div class="menu">
-            <a href="#" class="menu-button" target="_blank" rel="noopener">
+            <a href="https://docs.google.com/forms/d/e/YOUR_SANCTION_FORM_ID_HERE/viewform" class="menu-button sanciones-button" target="_blank" rel="noopener" title="Debes reemplazar esta URL con el enlace a tu Google Form para sancionar">
                 <i class="fa-solid fa-gavel"></i> SANCIONAR
             </a>
-            <a href="#" class="menu-button" target="_blank" rel="noopener">
+            <a href="https://script.google.com/macros/s/AKfycbxrss4ubqUJ6hPD0jkBZ1hVsm0ueAQLNK10SZAedlylC84-v4JZE6CDebAN_fy4eE2w/exec" class="menu-button sanciones-button" target="_blank" rel="noopener">
                 <i class="fa-solid fa-list-check"></i> VER SANCIONES
             </a>
         </div>
     </main>
     <footer>
-        <p>&copy; 2025 LSPD. Todos los derechos reservados.</p>
+        <p>© 2025 LSPD. Todos los derechos reservados.</p>
     </footer>
 </body>
 </html>

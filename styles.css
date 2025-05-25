@@ -2,123 +2,197 @@
   --primary: #1a3c6e;
   --secondary: #0078d7;
   --accent: #00a2ff;
-  --background: #0a131c;
-  --card-bg: #132333;
-  --text: #ffffff;
-  --text-muted: #a7c1de;
+  --accent-darker: #0084d4;
+  --accent-glow: #00a2ff55;
+  --accent-translucent: #00a2ff88;
+  --background: #0a131c; /* Deep dark blue, almost black */
+  --card-bg: rgba(19, 35, 51, 0.92); /* Slightly transparent dark blue */
+  --card-bg-opaque: #132333;
+  --text: #eaf6ff; /* Off-white, softer on eyes */
+  --text-muted: #a7c1de; /* Muted blue-gray for secondary text */
+  --danger: #ff4d4f;
+  --success: #52c41a;
+
+  --body-gradient: linear-gradient(130deg, var(--background) 0%, var(--primary) 70%, var(--secondary) 100%);
+  --button-gradient: linear-gradient(120deg, var(--secondary), var(--accent));
+  --button-hover-gradient: linear-gradient(120deg, var(--accent), var(--accent-darker));
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Segoe UI', Arial, sans-serif;
 }
 
 body {
-  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  background: var(--body-gradient);
   min-height: 100vh;
-  margin: 0;
-  font-family: 'Segoe UI', Arial, sans-serif;
+  font-family: 'Segoe UI', Roboto, Arial, sans-serif; /* Added Roboto as a fallback */
   color: var(--text);
   display: flex;
   flex-direction: column;
+  line-height: 1.6;
 }
 
 header {
   text-align: center;
-  padding: 2rem 0 1rem 0;
-  background: rgba(10, 19, 28, 0.7);
-  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+  padding: 1.5rem 1rem 0.5rem 1rem; /* Adjusted padding */
+  background: transparent; /* Made transparent, relies on body background */
+  box-shadow: none;
 }
 
 header h1 {
-  font-size: 2.5rem;
+  font-size: 2.6rem; /* Slightly larger */
   font-weight: 800;
   letter-spacing: 2px;
-  color: var(--accent);
-  margin: 0;
-  text-shadow: 1px 2px 8px #0008;
+  color: var(--text); /* Changed to main text for better contrast on some backgrounds */
+  margin: 0 0 0.5rem 0;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6), 0 0 15px var(--accent-glow); /* Enhanced shadow */
 }
 
 main {
   flex: 1;
   display: flex;
+  flex-direction: column; /* Allow for content like tables to flow */
   align-items: center;
   justify-content: center;
+  padding: 1rem; /* Add some padding to main */
+}
+
+/* Common container for page logos */
+.page-logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.5rem; /* Adjusted */
+  margin-bottom: 1rem; /* Adjusted */
+}
+
+.page-logo {
+  width: 150px; /* Slightly smaller default */
+  height: 150px;
+  border-radius: 50%;
+  background: rgba(10, 19, 28, 0.75); /* Slightly more opaque */
+  box-shadow: 0 8px 36px rgba(0, 0, 0, 0.45); /* Softer, more spread shadow */
+  padding: 12px; /* Adjusted padding */
+  object-fit: contain;
+  border: 3px solid var(--accent-translucent);
+  transition: transform 0.3s ease-out, box-shadow 0.3s ease-out, border-color 0.3s ease-out;
+}
+
+.page-logo:hover {
+  transform: scale(1.08) rotate(-4deg);
+  box-shadow: 0 12px 40px var(--accent-glow), 0 0 15px var(--accent);
+  border-color: var(--accent);
 }
 
 .menu {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1.25rem; /* Default gap */
   background: var(--card-bg);
-  padding: 3rem 2rem;
-  border-radius: 18px;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.25);
-  min-width: 320px;
-  align-items: center;
+  padding: 2.5rem 2rem; /* Generous padding */
+  border-radius: 20px; /* More rounded */
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.35);
+  min-width: 350px;
+  max-width: 90vw; /* Ensure it doesn't overflow on small screens */
+  align-items: stretch; /* Make buttons take full width of menu by default */
+  border: 1px solid var(--accent-translucent);
+  backdrop-filter: blur(5px); /* Slightly more blur */
 }
 
 .menu-button {
   display: flex;
   align-items: center;
-  justify-content: flex-start; /* Alinea el contenido a la izquierda */
-  gap: 0.4em;                 /* Reduce el espacio entre icono y texto */
-  width: 260px; /* Más ancho para mejor alineación */
-  padding: 1.2rem 0 1.2rem 1.6rem; /* Más espacio a la izquierda */
-  font-size: 1.3rem;
+  justify-content: flex-start;
+  gap: 0.8em; /* Space between icon and text */
+  width: 100%; /* Take full width of .menu container */
+  padding: 0.9rem 1.5rem; /* Balanced padding */
+  font-size: 1.1rem; /* Good readable size */
   font-weight: 600;
   color: var(--text);
-  background: linear-gradient(90deg, var(--secondary), var(--accent));
+  background: var(--button-gradient);
   border: none;
-  border-radius: 8px;
+  border-radius: 10px; /* Softer radius */
   text-decoration: none;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.12);
-  transition: transform 0.15s, box-shadow 0.15s, background 0.2s;
-  letter-spacing: 1px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2), 0 1px 3px rgba(0,0,0,0.1) inset;
+  transition: transform 0.2s ease-out, box-shadow 0.2s ease-out, background 0.3s;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
   position: relative;
   overflow: hidden;
 }
 
 .menu-button:hover, .menu-button:focus {
-  background: linear-gradient(90deg, var(--accent), var(--secondary));
+  background: var(--button-hover-gradient);
   color: #fff;
-  transform: translateY(-3px) scale(1.04);
-  box-shadow: 0 6px 24px rgba(0,162,255,0.18);
+  transform: translateY(-3px) scale(1.02); /* Subtle lift and scale */
+  box-shadow: 0 7px 25px var(--accent-glow), 0 2px 5px rgba(0,0,0,0.15) inset;
   outline: none;
 }
 
 .menu-button i {
-  min-width: 1.3em; /* Reduce el espacio reservado para el icono */
-  text-align: left;
-  margin-right: 0.4em; /* Reduce el margen derecho del icono */
-  font-size: 1.3em;
+  min-width: 1.2em;
+  text-align: center;
+  font-size: 1.2em; /* Icon size relative to text */
+  margin-right: 0.2em;
+  opacity: 0.9;
 }
 
 footer {
   text-align: center;
-  padding: 1.2rem 0 0.7rem 0;
+  padding: 1.5rem 1rem; /* Increased padding */
   color: var(--text-muted);
-  background: rgba(10, 19, 28, 0.7);
-  font-size: 1rem;
+  background: rgba(10, 19, 28, 0.8); /* Slightly more opaque */
+  font-size: 0.9rem; /* Slightly smaller */
   letter-spacing: 0.5px;
-  margin-top: auto;
+  margin-top: auto; /* Pushes footer to bottom */
+  border-top: 1px solid var(--accent-translucent);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
+  .menu {
+    min-width: unset;
+    width: 90vw;
+    padding: 2rem 1.5rem;
+    gap: 1rem;
+  }
+  .menu-button {
+    font-size: 1rem;
+    padding: 0.8rem 1.2rem;
+  }
+  .page-logo {
+    width: 120px;
+    height: 120px;
+  }
 }
 
 @media (max-width: 600px) {
+  header h1 {
+    font-size: 1.7rem;
+  }
+  .page-logo-container { margin-top: 1rem; margin-bottom: 0.8rem; }
+  .page-logo { width: 90px; height: 90px; padding: 8px;}
+
   .menu {
-    min-width: unset;
     width: 95vw;
-    padding: 2rem 0.5rem;
-    gap: 1.2rem;
+    padding: 1.5rem 1rem;
+    gap: 0.8rem;
   }
   .menu-button {
-    width: 90vw;
-    font-size: 1.1rem;
-    padding: 1rem 0;
+    font-size: 0.95rem;
+    padding: 0.75rem 1rem;
+    letter-spacing: 1px;
   }
-  header h1 {
-    font-size: 1.5rem;
+  .menu-button i {
+    font-size: 1.1em;
+  }
+  footer {
+    padding: 1rem 0.5rem;
+    font-size: 0.85rem;
   }
 }

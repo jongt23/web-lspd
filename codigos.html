@@ -3,154 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LSPD - Códigos</title>
+    <title>LSPD - Códigos y Claves</title> <!-- Title slightly changed -->
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="icon" type="image/png" href="https://r2.fivemanage.com/image/smVKck6hpqCp.png">
     <style>
-      body {
-        background: linear-gradient(120deg, #0a131c 0%, #1a3c6e 60%, #0078d7 100%);
-      }
-      .lspd-logo-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 2.2rem;
-        margin-bottom: 1.2rem;
-      }
-      .lspd-logo {
-        width: 192px;
-        height: 192px;
-        border-radius: 50%;
-        background: rgba(10,19,28,0.7);
-        box-shadow: 0 6px 32px #000a;
-        padding: 16px;
-        object-fit: contain;
-        border: 3px solid var(--accent, #0078d7);
-        transition: transform 0.2s;
-      }
-      .lspd-logo:hover {
-        transform: scale(1.07) rotate(-3deg);
-        box-shadow: 0 12px 36px #00a2ff55;
-        border-color: #fff;
-      }
-      header {
-        background: transparent;
-        box-shadow: none;
-        padding-bottom: 0;
-      }
+      /* Codigos specific styles */
       header h1 {
-        font-size: 2.3rem;
-        font-weight: 900;
-        letter-spacing: 2px;
-        color: var(--accent, #0078d7);
-        margin: 0 0 0.5rem 0;
-        text-shadow: 0 2px 16px #000a, 0 0px 2px #00a2ff55;
-        text-align: center;
+        color: var(--accent); /* Keep accent color for this specific H1 */
+      }
+      .codigos-main-container { /* New wrapper for flex layout */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 0 1rem; /* Add horizontal padding */
       }
       .codigos-tables-flex {
         display: flex;
-        gap: 2rem;
+        gap: 1.5rem; /* Reduced gap */
         justify-content: center;
         flex-wrap: wrap;
         width: 100%;
-        max-width: 1100px;
-        margin: 2rem auto;
-        align-items: flex-start; /* <-- Esto permite que cada tabla tenga su propia altura */
+        max-width: 1200px; /* Increased max-width for wider screens */
+        margin: 1.5rem auto; /* Adjusted margin */
+        align-items: flex-start;
       }
-      .codigos-table {
-        flex: 1 1 350px;
-        max-width: 500px;
-        min-width: 280px;
-        background: rgba(19,35,51,0.92);
-        border: 2px solid var(--accent, #0078d7);
-        border-radius: 16px;
-        box-shadow: 0 8px 32px #000a;
-        overflow: hidden;
+      .codigos-table-wrapper { /* Changed from .codigos-table to avoid conflict if .codigos-table is for the table element itself */
+        flex: 1 1 380px; /* Adjusted flex basis */
+        max-width: 550px; /* Adjusted max width */
+        min-width: 300px; /* Adjusted min width */
+        background: var(--card-bg-opaque); /* Opaque background for tables */
+        border: 1px solid var(--accent-translucent);
+        border-radius: 16px; /* Softer radius */
+        box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+        overflow: hidden; /* Keep this for border-radius on table */
         margin-bottom: 1rem;
       }
       table.codigos {
         width: 100%;
         border-collapse: collapse;
-        font-size: 1.08rem;
+        font-size: 1rem; /* Slightly smaller base for more content */
       }
       table.codigos th, table.codigos td {
-        padding: 0.85rem 1.2rem;
+        padding: 0.75rem 1rem; /* Adjusted padding */
         text-align: left;
+        border-bottom: 1px solid #2a4466; /* Slightly lighter border */
       }
       table.codigos th {
-        background: var(--accent, #0078d7);
-        color: #fff;
-        font-size: 1.1rem;
-        letter-spacing: 1px;
+        background: var(--accent);
+        color: #061422; /* Dark text on accent bg for contrast */
+        font-size: 1.05rem;
+        letter-spacing: 0.8px;
         font-weight: 700;
       }
-      table.codigos tr:nth-child(even) {
-        background: #16263b;
+      table.codigos tr:nth-child(even) td { /* Targeting td for background */
+        background: rgba(34, 58, 87, 0.5); /* More subtle even row */
       }
-      table.codigos tr:nth-child(odd) {
-        background: #223a57;
+      table.codigos tr:nth-child(odd) td {
+        background: rgba(22, 38, 59, 0.5); /* More subtle odd row */
       }
       table.codigos td {
-        color: #eaf6ff;
-        border-bottom: 1px solid #1a2d47;
+        color: var(--text);
       }
       table.codigos tr:last-child td {
         border-bottom: none;
       }
-      @media (max-width: 700px) {
-        .codigos-table { max-width: 98vw; }
-        .codigos-table-container { margin: 1rem 0; }
-        table.codigos th, table.codigos td { padding: 0.6rem 0.5rem; font-size: 0.97rem; }
-      }
-      @media (max-width: 500px) {
-        header h1 { font-size: 1.2rem; }
-        .lspd-logo { width: 70px; height: 70px; }
+      .volver-btn-container { /* Container for the button */
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin: 1rem 0; /* Space around the button */
       }
       .volver-btn {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.5em;
-        margin: 1.5rem auto 0 auto;
-        padding: 0.7rem 1.5rem;
-        border-radius: 8px;
-        background: var(--accent, #0078d7);
-        color: #fff;
-        font-weight: 700;
-        font-size: 1rem;
-        border: none;
-        box-shadow: 0 2px 12px #0004;
-        text-decoration: none;
-        transition: background 0.2s, transform 0.2s;
-        cursor: pointer;
-        max-width: 220px;
-        justify-content: center;
+        /* Will mostly inherit from .menu-button, but can add specific overrides */
+        max-width: 250px; /* Control its width */
+        justify-content: center; /* Center icon and text */
       }
-      .volver-btn:hover {
-        background: #005fa3;
-        transform: scale(1.04);
+
+      @media (max-width: 700px) {
+        .codigos-table-wrapper { max-width: 95vw; min-width: 95vw; }
+        table.codigos th, table.codigos td { padding: 0.6rem 0.7rem; font-size: 0.9rem; }
+        header h1 { font-size: 1.5rem; }
+      }
+      @media (max-width: 500px) {
+        /* .page-logo handled by global styles */
+        table.codigos th, table.codigos td { padding: 0.5rem; font-size: 0.85rem; }
       }
     </style>
 </head>
 <body>
     <header>
-        <div class="lspd-logo-container">
+        <div class="page-logo-container">
             <a href="index.html" title="Volver al menú principal">
-                <img src="https://r2.fivemanage.com/image/smVKck6hpqCp.png" alt="LSPD Logo" class="lspd-logo">
+                <img src="https://r2.fivemanage.com/image/smVKck6hpqCp.png" alt="LSPD Logo" class="page-logo">
             </a>
         </div>
         <h1>Códigos y Claves LSPD</h1>
     </header>
-    <main>
+    <main class="codigos-main-container">
       <div class="codigos-tables-flex">
-        <div class="codigos-table">
+        <div class="codigos-table-wrapper">
           <table class="codigos">
-            <thead>
-              <tr>
-                <th>Código</th>
-                <th>Significado</th>
-              </tr>
-            </thead>
+            <thead><tr><th>Código</th><th>Significado</th></tr></thead>
             <tbody>
               <tr><td>10-0</td><td>Precaución</td></tr>
               <tr><td>10-3</td><td>Pedir información sobre X</td></tr>
@@ -172,14 +127,9 @@
             </tbody>
           </table>
         </div>
-        <div class="codigos-table">
+        <div class="codigos-table-wrapper">
           <table class="codigos">
-            <thead>
-              <tr>
-                <th>Código</th>
-                <th>Significado</th>
-              </tr>
-            </thead>
+            <thead><tr><th>Código</th><th>Significado</th></tr></thead>
             <tbody>
               <tr><td>Cod-1</td><td>Aviso centralita</td></tr>
               <tr><td>Cod-2</td><td>Unidad disponible</td></tr>
@@ -208,9 +158,14 @@
           </table>
         </div>
       </div>
+      <div class="volver-btn-container">
+        <a href="index.html" class="menu-button volver-btn">
+            <i class="fa-solid fa-arrow-left"></i> Volver al Menú
+        </a>
+      </div>
     </main>
     <footer>
-        <p style="text-align:center; color:#eaf6ff; margin-top:2rem;">&copy; 2025 LSPD. Todos los derechos reservados.</p>
+        <p>© 2025 LSPD. Todos los derechos reservados.</p> <!-- Standardized footer text -->
     </footer>
 </body>
 </html>

@@ -8,67 +8,19 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="icon" type="image/png" href="https://r2.fivemanage.com/image/smVKck6hpqCp.png">
     <style>
-      .lspd-logo-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 2.2rem;
-        margin-bottom: 1.2rem;
-      }
-      .lspd-logo {
-        width: 192px;   /* 110px * 1.75 ≈ 192px */
-        height: 192px;
-        border-radius: 50%;
-        background: rgba(10,19,28,0.7);
-        box-shadow: 0 6px 32px #000a;
-        padding: 16px;
-        object-fit: contain;
-        border: 3px solid var(--accent);
-        transition: transform 0.2s;
-      }
-      .lspd-logo:hover {
-        transform: scale(1.07) rotate(-3deg);
-        box-shadow: 0 12px 36px #00a2ff55;
-        border-color: #fff;
-      }
-      .menu {
-        background: rgba(19,35,51,0.92);
-        box-shadow: 0 12px 40px #0007;
-        border: 2px solid var(--accent);
-        backdrop-filter: blur(2px);
-      }
-      .menu-button {
-        text-transform: uppercase;
-        letter-spacing: 1.5px;
-      }
-      header {
-        background: transparent;
-        box-shadow: none;
-        padding-bottom: 0;
-      }
+      /* Files specific styles */
       header h1 {
-        font-size: 2.3rem;
-        font-weight: 900;
-        letter-spacing: 2px;
-        color: var(--accent);
-        margin: 0 0 0.5rem 0;
-        text-shadow: 0 2px 16px #000a, 0 0px 2px #00a2ff55;
+        color: var(--accent); /* Keep accent color for this specific H1 */
       }
-      body {
-        background: linear-gradient(120deg, #0a131c 0%, #1a3c6e 60%, #0078d7 100%);
-      }
-      @media (max-width: 600px) {
-        .lspd-logo-container { margin-top: 1.2rem; margin-bottom: 0.7rem; }
-        .lspd-logo { width: 100px; height: 100px; padding: 8px; }
-        header h1 { font-size: 1.3rem; }
-      }
+      /* .menu and .menu-button will inherit nicely from styles.css */
+      /* No major overrides needed for this page */
     </style>
 </head>
 <body>
     <header>
-        <div class="lspd-logo-container">
+        <div class="page-logo-container">
             <a href="index.html" title="Volver al menú principal">
-                <img src="https://r2.fivemanage.com/image/smVKck6hpqCp.png" alt="LSPD Logo" class="lspd-logo">
+                <img src="https://r2.fivemanage.com/image/smVKck6hpqCp.png" alt="LSPD Logo" class="page-logo">
             </a>
         </div>
         <h1>LSPD - Expedientes</h1>
@@ -76,15 +28,15 @@
     <main>
         <div class="menu">
             <a href="https://docs.google.com/forms/d/e/1FAIpQLScQRyca_CxTPlZSQiP4IdN3vxam9sbbNg3X0Jv__982Lj_l2Q/viewform?usp=dialog" class="menu-button" target="_blank" rel="noopener">
-                <i class="fa-solid fa-plus"></i> ENVIAR DENUNCIA
+                <i class="fa-solid fa-file-pen"></i> ENVIAR DENUNCIA <!-- Changed icon -->
             </a>
             <a href="https://script.google.com/macros/s/AKfycbxZlxBz9pJU5YZW1xvgLZoZH97QUxQZMiO_FM01AcdAaunq2EIJBfD4D-rQ-H8f0gPL/exec" class="menu-button" target="_blank" rel="noopener">
-                <i class="fa-solid fa-eye"></i> VER EXPEDIENTES
+                <i class="fa-solid fa-folder-tree"></i> VER EXPEDIENTES <!-- Changed icon -->
             </a>
         </div>
     </main>
     <footer>
-        <p>&copy; 2025 LSPD. Todos los derechos reservados.</p>
+        <p>© 2025 LSPD. Todos los derechos reservados.</p>
     </footer>
 </body>
 </html>
