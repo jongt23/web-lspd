@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LSPD - Manual</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="icon" type="image/png" href="https://r2.fivemanage.com/image/smVKck6hpqCp.png">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #121212;
+            color: #eaf6ff;
+            font-family: Arial, sans-serif;
+        }
+
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+
+        .menu-button {
+            display: inline-block;
+            margin: 20px 0;
+            padding: 18px 48px;
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #fff;
+            background: #1976d2;
+            border: none;
+            border-radius: 8px;
+            text-decoration: none;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            transition: background 0.2s;
+            text-align: center;
+        }
+
+        .menu-button i {
+            margin-right: 0.5rem;
+        }
+
+        .menu-button:hover {
+            background-color: #1565c0;
+        }
+
+        .manual-completo {
+            background-color: #388e3c;
+        }
+
+        .manual-completo:hover {
+            background-color: #2e7d32;
+        }
+
+        footer {
+            margin-top: auto;
+            padding: 1rem;
+            text-align: center;
+            background-color: #1e1e1e;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="page-logo-container">
+            <a href="index.html" title="Volver al menú principal">
+                <img src="https://r2.fivemanage.com/image/smVKck6hpqCp.png" alt="LSPD Logo" class="page-logo">
+            </a>
+        </div>
+    </header>
+    <main>
+        <div style="display: flex; flex-direction: column; align-items: center; justify-content: flex-start; min-height: 60vh; margin-top: 0.5rem;">
+            <a href="https://docs.google.com/document/d/1iOM9zPD4VD8Bw6vSeogmNGX_MhcT2ce90NL9Z12OO5Q/edit?usp=sharing" target="_blank" class="menu-button manual-resumido">
+                <i class="fa-solid fa-file-alt"></i> MANUAL RESUMIDO
+            </a>
+            <a href="https://docs.google.com/document/d/18Ievo5IPF3T1k146sbrtEu_N5VSi0E9sL22jcYihaxs/edit?usp=sharing" target="_blank" class="menu-button manual-completo">
+                <i class="fa-solid fa-book-open"></i> MANUAL COMPLETO
+            </a>
+        </div>
+    </main>
+    <footer>
+        <p>© 2025 LSPD. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
